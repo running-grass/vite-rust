@@ -1,20 +1,35 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "include": [
-        "src"
-    ],
     "compilerOptions": {
-        "lib": ["DOM", "es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
-
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
         "strict": true,
+        "jsx": "preserve",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
         "esModuleInterop": true,
-        "skipLibCheck": true,
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        //   "lib": ["DOM", "es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
         "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "node",
-
-        // "lib": ["DOM"],
-        "outDir": "dist",
+        "skipLibCheck": true,
         "declaration": true,
-        // "removeComments": true
+        "outDir": "dist",
+        "noEmit": true
     },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
 }
