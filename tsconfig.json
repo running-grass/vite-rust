@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "include": [
+        "src"
+    ],
+    "compilerOptions": {
+        "lib": ["DOM", "es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
+
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+
+        // "lib": ["DOM"],
+        "outDir": "dist",
+        "declaration": true,
+        // "removeComments": true
+    },
+}
